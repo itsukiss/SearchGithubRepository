@@ -6,6 +6,8 @@ target 'SearchGithubRepository' do
   use_frameworks!
 
   # Pods for SearchGithubRepository
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'SearchGithubRepositoryTests' do
     inherit! :search_paths
