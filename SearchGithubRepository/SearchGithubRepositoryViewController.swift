@@ -63,7 +63,8 @@ class SearchGithubRepositoryViewController: UIViewController {
         }).disposed(by: disposeBag)
         
         viewModel.repositories
-            .bind(to: tableView.rx.items(cellIdentifier: "SearchGithubRepositoryCell", cellType: SearchGithubRepositoryCell.self)) { _, element, cell in
+            .bind(to: tableView.rx.items(cellIdentifier: "SearchGithubRepositoryCell", cellType: SearchGithubRepositoryCell.self)) { [weak self] _, element, cell in
+                self?.errorView.isHidden = true
                 cell.repository = element
             }.disposed(by: disposeBag)
         
