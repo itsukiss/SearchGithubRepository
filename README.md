@@ -1,0 +1,2 @@
+# SearchGithubRepository
+GithubのRepositoryを検索するサンプルアプリです。
