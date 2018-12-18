@@ -12,6 +12,13 @@ class SearchGithubRepositoryCell: UITableViewCell {
     
     @IBOutlet weak var repositoryNameLabel: UILabel!
     
+    var repository: SearchGithubRepositoryModel.Repository? {
+        didSet {
+            guard let repository = repository else { return }
+            repositoryNameLabel.text = repository.fullName
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

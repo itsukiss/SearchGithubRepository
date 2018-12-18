@@ -19,6 +19,10 @@
 		C2388D9B21C23AE000B24BDD /* SearchGithubRepositoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2388D9A21C23AE000B24BDD /* SearchGithubRepositoryUITests.swift */; };
 		C2388DA921C2457000B24BDD /* SearchGithubRepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2388DA821C2457000B24BDD /* SearchGithubRepositoryCell.xib */; };
 		C2388DAB21C245F500B24BDD /* SearchGithubRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2388DAA21C245F500B24BDD /* SearchGithubRepositoryCell.swift */; };
+		C2388DAD21C2491E00B24BDD /* SearchGithubRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2388DAC21C2491E00B24BDD /* SearchGithubRepositoryModel.swift */; };
+		C2388DAF21C2632C00B24BDD /* SearchGithubRepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2388DAE21C2632C00B24BDD /* SearchGithubRepositoryViewModel.swift */; };
+		C2388DB121C8D4AC00B24BDD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2388DB021C8D4AC00B24BDD /* WebViewController.swift */; };
+		C2388DB321C8D4B800B24BDD /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2388DB221C8D4B800B24BDD /* WebViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		C2388D9C21C23AE000B24BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2388DA821C2457000B24BDD /* SearchGithubRepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchGithubRepositoryCell.xib; sourceTree = "<group>"; };
 		C2388DAA21C245F500B24BDD /* SearchGithubRepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubRepositoryCell.swift; sourceTree = "<group>"; };
+		C2388DAC21C2491E00B24BDD /* SearchGithubRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubRepositoryModel.swift; sourceTree = "<group>"; };
+		C2388DAE21C2632C00B24BDD /* SearchGithubRepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubRepositoryViewModel.swift; sourceTree = "<group>"; };
+		C2388DB021C8D4AC00B24BDD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C2388DB221C8D4B800B24BDD /* WebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
 		D399AA4885E58966D26E402D /* Pods-SearchGithubRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchGithubRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchGithubRepository/Pods-SearchGithubRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		D44E9301BD6A9D29D3F00921 /* Pods_SearchGithubRepositoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchGithubRepositoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8441872488F8BF3C16BB5B5 /* Pods_SearchGithubRepositoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchGithubRepositoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +142,12 @@
 				C2388D7A21C23AD900B24BDD /* AppDelegate.swift */,
 				C2388D7C21C23AD900B24BDD /* SearchGithubRepositoryViewController.swift */,
 				C2388D7E21C23AD900B24BDD /* SearchGithubRepositoryViewController.storyboard */,
+				C2388DAC21C2491E00B24BDD /* SearchGithubRepositoryModel.swift */,
+				C2388DAE21C2632C00B24BDD /* SearchGithubRepositoryViewModel.swift */,
 				C2388DAA21C245F500B24BDD /* SearchGithubRepositoryCell.swift */,
 				C2388DA821C2457000B24BDD /* SearchGithubRepositoryCell.xib */,
+				C2388DB021C8D4AC00B24BDD /* WebViewController.swift */,
+				C2388DB221C8D4B800B24BDD /* WebViewController.storyboard */,
 				C2388D8121C23ADF00B24BDD /* Assets.xcassets */,
 				C2388D8321C23ADF00B24BDD /* LaunchScreen.storyboard */,
 				C2388D8621C23ADF00B24BDD /* Info.plist */,
@@ -283,6 +295,7 @@
 				C2388D8521C23ADF00B24BDD /* LaunchScreen.storyboard in Resources */,
 				C2388D8221C23ADF00B24BDD /* Assets.xcassets in Resources */,
 				C2388D8021C23AD900B24BDD /* SearchGithubRepositoryViewController.storyboard in Resources */,
+				C2388DB321C8D4B800B24BDD /* WebViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,8 +398,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2388DAB21C245F500B24BDD /* SearchGithubRepositoryCell.swift in Sources */,
+				C2388DB121C8D4AC00B24BDD /* WebViewController.swift in Sources */,
 				C2388D7D21C23AD900B24BDD /* SearchGithubRepositoryViewController.swift in Sources */,
+				C2388DAD21C2491E00B24BDD /* SearchGithubRepositoryModel.swift in Sources */,
 				C2388D7B21C23AD900B24BDD /* AppDelegate.swift in Sources */,
+				C2388DAF21C2632C00B24BDD /* SearchGithubRepositoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
