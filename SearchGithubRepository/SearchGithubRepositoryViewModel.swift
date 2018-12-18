@@ -10,19 +10,22 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchGithubRepositoryViewModel {
-    
+final class SearchGithubRepositoryViewModel {
+    typealias SearchRepositories = (String) -> Observable<SearchGithubRepositoryModel.Repositories?>
+
     private let disposeBag = DisposeBag()
     var repositories: Observable<[SearchGithubRepositoryModel.Repository]>
     var error: Observable<Error>
     
-    init(searchText: Observable<String>) {
-        
+    init(searchText: Observable<String>,
+         concurrentMainScheduler: SchedulerType = ConcurrentMainScheduler.instance,
+         loadSearchURL: @escaping SearchRepositories = SearchGithubRepositoryModel.loadSearchURL) {
+
         let searchResult = searchText
             .distinctUntilChanged()
-            .debounce(0.3, scheduler: ConcurrentMainScheduler.instance)
+            .debounce(0.3, scheduler: concurrentMainScheduler)
             .flatMap {
-                return SearchGithubRepositoryModel.loadSearchURL($0).materialize()
+                loadSearchURL($0).materialize()
             }
             .share()
         
